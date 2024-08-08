@@ -1,12 +1,20 @@
-export default function Footer() {
+import React from "react";
+import Container from "./Container";
+
+const Footer = () => {
   const date = new Date();
   return (
-    <footer className="mx-5 mt-auto bg-black text-white text-center py-2">
-      {date.getFullYear()}
-      <a href="https://mms-it.com" className="underline text-gray-400">
-        MMS IT
-      </a> 
-      . All rights reserved.
-    </footer>
+    <Container>
+      <footer className=" mt-auto bg-black text-white text-center py-2">
+        {date.getFullYear()}
+        <span> </span>
+        <a href="https://mms-it.com" className="underline text-gray-400">
+          MMS IT
+        </a>
+        <span> . All rights reserved.</span>
+      </footer>
+    </Container>
   );
-}
+};
+
+export default Footer;
